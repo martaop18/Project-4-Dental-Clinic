@@ -25,6 +25,7 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date()
       },
+      
       { id: 3,
         name: "Magy",
         lastname: "Lozano",
@@ -35,6 +36,7 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date()
       },
+
       { id: 4,
         name: "Sylvia",
         lastname: "Moreira",
@@ -45,6 +47,7 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date()
       },
+
       { id: 5,
         name: "Nina",
         lastname: "Osorio",
@@ -55,6 +58,7 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date()
       },
+
       { id: 6,
         name: "Sofia",
         lastname: "Bari",

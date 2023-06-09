@@ -1,13 +1,25 @@
+//SETTING CONSTS
+
 const express = require('express');
+
+const db = require('./db');
 
 const app = express();
 
 const PORT = 3000;
 
-app.get('/health', (req, res) => {
-    return res.send('healthy');
-});
 
-app.listen(PORT, () => {
-    console.log('Server is running on port: ' + PORT);
+//SETTING APPS
+
+app.use(express.json());
+
+
+db.then( () => {
+    app.listen(PORT, () => {
+        console.log('Server is running on port: ' + PORT);
+    })
+}).catch((error)=>{
+    console.error('error starting server')
 })
+
+
