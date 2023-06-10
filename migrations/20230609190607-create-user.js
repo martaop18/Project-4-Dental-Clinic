@@ -24,7 +24,6 @@ module.exports = {
       password: {
         type: Sequelize.STRING,
         required: true,
-        // min: lenght?
       },
       phone: {
         type: Sequelize.STRING
@@ -37,11 +36,11 @@ module.exports = {
         }
       },
       createdAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE
       }
     });
