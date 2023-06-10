@@ -14,7 +14,6 @@ userController.getUser = async(req, res) => {
                        
                  }
         )
-        
         return res.json({
             success: true,
             message: "user profile retrieved",
@@ -30,10 +29,11 @@ userController.getUser = async(req, res) => {
         )    
     }
 }
-
+//
 userController.updateUser = async(req, res) => {
     try {
-        const userId = req.params.id;
+        const userId = req.userId;
+        console.log(userId)
 
         const user = await User.findByPk(userId);
 
