@@ -71,9 +71,7 @@ authController.login = async (req, res) => {
                 email: user.email
             },
             'female',
-            {
-                expiresIn: '1h' 
-            }
+           
         );  
 
         return res.json(

@@ -1,38 +1,37 @@
 const { User } = require('../models');
-const authController = require("./authController");
-
-
-const userController = {}
+const userController = {};
 
 userController.getUser = async(req, res) => {
     try {
-        const userId = req.body.user_id;
+        const userId = req.userId;
+
+        const userProfile = await User.findByPk(
+            userId,
+            {
+                attributes: {
+                    exclude: ["password"]
+                },
+              
+               
+                       
+                    }
+        )
         
 
-        const favorite = await Favorite.create(
-            {
-                user_id: userId,
-            
-            }
-        );
-
-        return res.json(
-            {
-                success: true,
-                message: "got the User",
-                data: favorite
-            }
-        );
+        return res.json({
+            success: true,
+            message: "user profile retrieved",
+            data: userProfile
+        })
     } catch (error) {
         return res.status(500).json(
             {
                 success: false,
-                message: "Favorite Book cant be created",
+                message: "User profile  cant be retrieved",
                 error: error
             }
-        )
+        )    
     }
-
 }
 
 module.exports = userController;
