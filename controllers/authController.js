@@ -10,13 +10,14 @@ authController.register = async (req, res) => {
     if (password.length < 6) {
         return res.send('Password must be longer than 6 characters');
     }
-    const newPassword = bcrypt.hashSync(req.body.password, 10);
+    const newPassword = bcrypt.hashSync(req.body.password, 8);
 
         const newUser = await User.create(
             {
                 name: req.body.name,
                 lastname: req.body.lastname,
                 email: req.body.email,
+                password: newPassword,
                 phone: req.body.phone,
                 roleId: req.body.role_id
             }
@@ -46,7 +47,7 @@ authController.login = async (req, res) => {
             return res.json(
                 {
                     success: true,
-                    message: "Wrong credentials"
+                    message: "Wrong info"
                 }
             )
         }
@@ -58,7 +59,7 @@ authController.login = async (req, res) => {
             return res.json(
                 {
                     success: true,
-                    message: "Wrong credentials"
+                    message: "Wrong info"
                 }
             )
         }
@@ -69,16 +70,16 @@ authController.login = async (req, res) => {
                 roleId: user.role_id,
                 email: user.email
             },
-            'secreto',
+            'female',
             {
-                expiresIn: '3h' 
+                expiresIn: '1h' 
             }
         );  
 
         return res.json(
             {
                 success: true,
-                message: "User Logged",
+                message: "User logged",
                 token: token
             }
         );
@@ -86,7 +87,7 @@ authController.login = async (req, res) => {
         return res.status(500).json(
             {
                 success: false,
-                message: "user cant be logged",
+                message: "user cannot be logged",
                 error: error
             }
         )
