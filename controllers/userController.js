@@ -78,7 +78,6 @@ userController.updateUser = async(req, res) => {
     }
 }
 
-
 userController.getAllUsers =  async(req, res) => {
     try {
         const users = await User.findAll({
