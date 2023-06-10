@@ -1,21 +1,15 @@
-const { User } = require("../models");
+
 
 const isDoctor = async (req, res, next) => {
     try {
-        const doctor = await User.findAll({
-        where: { role_id: req.roleId },
-    });
-
-    if (!doctor) {
-        return res.status(500).json({
-        success: true,
-        message: "You do not have permissions.",
-        });
+const roleId = req.roleId
+    if (req.roleId !== 3) {
+        return res.json({
+            success: true,
+            message: "Something went wrong",
+        })
     }
-
-    if (req.roleId === 3) {
-        next();
-    }
+    next();
 } catch (error) {
         return res.status(500).json({
             success: false,

@@ -78,10 +78,15 @@ userController.updateUser = async(req, res) => {
     }
 }
 
+
 userController.getAllUsers =  async(req, res) => {
     try {
-        const users = await User.findAll();
-
+        const users = await User.findAll({
+            where: {
+                role_id: 1
+            }
+        });
+       
         return res.json({
             success: true,
             message: "users retrieved",
