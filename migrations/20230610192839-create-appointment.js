@@ -19,7 +19,7 @@ module.exports = {
           key: "id"
         }
       },
-      admin_id: {
+      patient_id: {
         type: Sequelize.INTEGER,
         references:{
           model:"User",
