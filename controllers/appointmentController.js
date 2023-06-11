@@ -91,8 +91,8 @@ appointmentController.updateAppointment = async (req, res) => {
             );
         };
 
-        const { date, service_id, doctor_id, } = req.body;
-        // Verificar el rol del usuario que realiza la solicitud
+        const { date, service_id, doctor_id } = req.body;
+      
 
         const appointmentUpdate = await Appointment.update(
             {
@@ -125,4 +125,28 @@ appointmentController.updateAppointment = async (req, res) => {
     }
 }
 
+// GET YOUR OWN APPOINTMENTS
+appointmentController.getUserAppointments = async (req, res) => {
+    try {
+        const { userId } = req;
+
+        const getUserAppointments = await Appointment.findAll({
+            where: {
+                patient_id: userId
+            }
+        });
+
+        return res.json({
+            success: true,
+            message: "Appointments retrieved",
+            data: getUserAppointments
+        });
+    } catch (error) {
+        return res.status(500).json({
+            success: false,
+            message: "Appointments cannot be retrieved",
+            error: error.message
+        });
+    }
+};
 module.exports = appointmentController;
