@@ -2,6 +2,7 @@ const { Appointment } = require("../models");
 
 const appointmentController = {};
 
+//CREATE APPOINTMENT
 appointmentController.createAppointment = async (req, res) => {
     try {
         const { date,  doctor_id, patient_id, service_id } = req.body;
@@ -44,5 +45,35 @@ appointmentController.createAppointment = async (req, res) => {
         )
     }
 }
+//DELETE APPOINTMENT
+
+appointmentController.deleteAppointment = async (req, res) => {
+    try {
+        const appointmentId = req.params.id;
+
+        const deleteAppointment = await Appointment.destroy({
+            where: {
+                id: appointmentId
+            }
+        });
+
+        return res.json(
+            {
+                success: true,
+                message: "Appointment deleted",
+                data: deleteAppointment
+            }
+        );
+    } catch (error) {
+        return res.status(500).json(
+            {
+                success: false,
+                message: "Appointment cannot be deleted",
+                error: error
+            }
+        )
+    }
+}
+
 
 module.exports = appointmentController;
