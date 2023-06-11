@@ -8,5 +8,6 @@ const auth = require('../middlewares/verifyToken');
 
 router.post('/newAppointment', auth, appointmentController.createAppointment);
 router.delete('/:id',auth, appointmentController.deleteAppointment);
+router.put('/:id',auth, appointmentController.updateAppointment);
 
 module.exports = router;

@@ -74,6 +74,55 @@ appointmentController.deleteAppointment = async (req, res) => {
         )
     }
 }
+//UPDATE APPOINTMENT
 
+appointmentController.updateAppointment = async (req, res) => {
+    try {
+        const appointmentId = req.params.id;
+
+        const appointment = await Appointment.findByPk(appointmentId);
+
+        if (!appointment) {
+            return res.json(
+                {
+                    success: true,
+                    message: "AppointmentId doesnt exist"
+                }
+            );
+        };
+
+        const { date, service_id, doctor_id, } = req.body;
+        // Verificar el rol del usuario que realiza la solicitud
+
+        const appointmentUpdate = await Appointment.update(
+            {
+                date,//'2023-06-07T14:30:00'
+                service_id,
+                doctor_id
+            },
+            {
+                where: {
+                    id: appointmentId
+                }
+            }
+        )
+
+        return res.json(
+            {
+                success: true,
+                message: "Appointment updated",
+                data: appointmentUpdate
+            }
+        );
+    } catch (error) {
+        return res.status(500).json(
+            {
+                success: false,
+                message: "Appointment cannot be updated",
+                error: error
+            }
+        )
+    }
+}
 
 module.exports = appointmentController;

@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-//1.We require and use the routes:
+//1.We require and get into the routes:
 
 const authRoutes = require('./views/authRoutes');
 const userRoutes = require('./views/userRoutes');
