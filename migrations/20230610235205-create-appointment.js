@@ -14,32 +14,41 @@ module.exports = {
       },
       doctor_id: {
         type: Sequelize.INTEGER,
-        references:{
-          model:"User",
-          key: "id"
-        }
+        references: {
+          model: "Users",
+          key: "id",
+          where: {
+            role_id: 3
+          }
+        },
+        allowNull: false,
       },
+      
       patient_id: {
         type: Sequelize.INTEGER,
-        references:{
-          model:"User",
-          key: "id"
-        }
-
+        references: {
+          model: "Users",
+          key: "id",
+          where: {
+            role_id: 1
+          }
+        },
+        allowNull: false,
       },
+      
       service_id: {
         type: Sequelize.INTEGER,
-        references:{
-          model:"Service",
+        references: {
+          model: "Services",
           key: "id"
-        }
+        },
       },
       createdAt: {
-        allowNull: true,
+        allowNull: false,
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: true,
+        allowNull: false,
         type: Sequelize.DATE
       }
     });
