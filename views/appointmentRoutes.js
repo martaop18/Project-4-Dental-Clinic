@@ -1,12 +1,12 @@
 
 const router = require('express').Router();
 
-const appointController = require('../controllers/appointController');
+const appointmentController = require('../controllers/appointmentController');
 
 const auth = require('../middlewares/verifyToken');
 
 
-router.post('/newAppointment', auth, appointController.createAppointment);
+router.post('/newAppointment', auth, appointmentController.createAppointment);
 
 
 module.exports = router;

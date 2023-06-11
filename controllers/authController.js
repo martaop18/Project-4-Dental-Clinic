@@ -1,5 +1,6 @@
 const { User } = require('../models');
 const bcrypt = require('bcrypt');
+
 //VERIFY TOKEN
 const jwt = require('jsonwebtoken');
 
@@ -92,6 +93,7 @@ authController.login = async (req, res) => {
     }
 }
  
+
 module.exports = authController
 
 
