@@ -5,6 +5,7 @@ const appointmentController = require('../controllers/appointmentController');
 
 const auth = require('../middlewares/verifyToken');
 
+//ENDPOINTS APPOINTMENTS
 
 router.post('/newAppointment', auth, appointmentController.createAppointment);
 router.delete('/:id', auth, appointmentController.deleteAppointment);
