@@ -142,7 +142,15 @@ appointmentController.getUserAppointments = async (req, res) => {
                 attributes: ['id', 'name']
             }]
         });
-
+        // appointmentController.getUserAppointments = async (req, res) => {
+        //     try {
+        //         const { userId } = req;
+        
+        //         const getUserAppointments = await Appointment.findAll({
+        //             where: {
+        //                 patient_id: userId
+        //             }
+        //         });
         return res.json({
             success: true,
             message: "Appointments retrieved",

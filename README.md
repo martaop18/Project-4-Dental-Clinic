@@ -17,9 +17,9 @@ A continuación enumero los pasos más relevantes para la ejecución del proyect
 9. Creo modelos Role, , User, Service y Appointment.
 10. Realizo migraciones con sus respectivas referencias.
 11. Creo db.js y route.js en raíz
-12. Creo carpeta controllers y views, en views encontramos los destinos finales.
-13. Creo middlewares para controlar el nivel de acceso a la información o a las funcionalidades de la base de datos según roles.
-   
+12.  Creo middlewares para controlar el nivel de acceso a la información o a las funcionalidades de la base de datos según roles.   
+13. Creo carpeta controllers y views, en views encontramos los destinos finales.
+    
 ## Endpoints
 
 A continuación presento una serie de endpoints requeridos. Las visuales las he obtenido gracias a la interacción de la base de datos y sequelize con Postman:
@@ -27,7 +27,7 @@ A continuación presento una serie de endpoints requeridos. Las visuales las he 
 ### Registro usuario-Admin
 ![Alt text](img/Admin%20register.jpg)
 
-### Login usuario_Doctor 
+### Login usuario-Doctor 
 ![Alt text](img/Doctor%20Login.jpg)
 
 ### Como Doctor, obtener listado de pacientes registrados
@@ -44,9 +44,6 @@ A continuación presento una serie de endpoints requeridos. Las visuales las he 
 ![Alt text](img/Get%20your%20own%20appointments%20Ema.jpg)
 
 
-
-
-
 #### Link al repositorio
 https://github.com/martaop18/Project-4-Dental-Clinic.git
 
@@ -59,5 +56,6 @@ https://github.com/martaop18/Project-4-Dental-Clinic.git
 ### Agradecimientos
 
 A Dani por ser un maestro excepcional, por su entrega, paciencia y dedicación.
+
 A todos los compañeros que me brindan su apoyo, especialmente a Oriana.
 Gracias Ori, llegarás muy lejos✨
