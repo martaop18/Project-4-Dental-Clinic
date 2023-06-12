@@ -1,10 +1,10 @@
-##       Cuarto proyecto-API Clínica Dental
+#       Cuarto proyecto - Backend Clínica Dental
 
 Este es el cuarto proyecto de mi entrenamiento como full stack developer. En este proyecto nos piden crear el  backend correspondiente al sistema de gestión de citas para una Clínica Dental. 
 
 Dentro de los requerimientos tenemos la creación del registro y el login como usuario, así como la actualización de datos, creación de citas y una serie de endpoints los cuales citaré más adelante. 
 
-### Proceso:
+## Proceso:
 A continuación enumero los pasos más relevantes para la ejecución del proyecto:
 1. Ejecuto Node con el package Json con npm init -y.
 2. Creo el archivo index.js en la ruta principal y el .gitignore con /node_modules.
@@ -14,11 +14,12 @@ A continuación enumero los pasos más relevantes para la ejecución del proyect
 6.  Ejecuto npm run dev para levantar el servidor.
 7.  Requiero express en index.js, y en la variable de instancia app. 
 8. Asigno el número de  puerto a nuestro servidor y uso el método listen para ejecutarlo.
-9. Creo modelos Role, , User, Service y Appointment.
-10. Realizo migraciones con sus respectivas referencias.
-11. Creo db.js y route.js en raíz
-12.  Creo middlewares para controlar el nivel de acceso a la información o a las funcionalidades de la base de datos según roles.   
-13. Creo carpeta controllers y views, en views encontramos los destinos finales.
+9. Asigno el puerto en docker y lo relaciono en la configuración Json del proyecto y a la base de datos.
+10. Creo modelos Role, , User, Service y Appointment.
+11. Realizo migraciones con sus respectivas referencias.
+12. Creo db.js y route.js en raíz
+13.  Creo middlewares para controlar el nivel de acceso a la información o a las funcionalidades de la base de datos según roles.   
+14. Creo carpeta controllers y views, en views encontramos los destinos finales.
     
 ## Endpoints
 
@@ -33,18 +34,21 @@ A continuación presento una serie de endpoints requeridos. Las visuales las he 
 ### Como Doctor, obtener listado de pacientes registrados
 ![Alt text](img/Get%20all%20patients%20as%20a%20Doctor.jpg)
 
-## Crear nueva cita como paciente
+### Crear nueva cita como paciente
 ![Alt text](img/create%20new%20appoint%20Judit.jpg)
 
 
-## Actualizar datos usuario
+### Actualizar datos usuario
 ![Alt text](img/UPDATE.jpg)
 
-## Obtener tus propias citas como paciente
+### Obtener tus propias citas como paciente
 ![Alt text](img/Get%20your%20own%20appointments%20Ema.jpg)
 
+### Diagrama base de datos relacional
+![Alt text](img/relational%20db.jpg)
 
-#### Link al repositorio
+
+### Link al repositorio
 https://github.com/martaop18/Project-4-Dental-Clinic.git
 
 
@@ -55,7 +59,7 @@ https://github.com/martaop18/Project-4-Dental-Clinic.git
 
 ### Agradecimientos
 
-A Dani por ser un maestro excepcional, por su entrega, paciencia y dedicación.
+A Dani por su entrega, paciencia y dedicación.
 
-A todos los compañeros que me brindan su apoyo, especialmente a Oriana.
+A todos los compañeros que día a día me brindan su apoyo, especialmente a Oriana.
 Gracias Ori, llegarás muy lejos✨
