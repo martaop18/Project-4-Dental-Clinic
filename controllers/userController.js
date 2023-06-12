@@ -23,13 +23,13 @@ userController.getUser = async(req, res) => {
         return res.status(500).json(
             {
                 success: false,
-                message: "User profile  cant be retrieved",
+                message: "User profile  cannot be retrieved",
                 error: error
             }
         )    
     }
 }
-//
+//UPDATE USER
 userController.updateUser = async(req, res) => {
     try {
         const userId = req.userId;
@@ -77,7 +77,7 @@ userController.updateUser = async(req, res) => {
         )
     }
 }
-
+//GET ALL USERS
 userController.getAllUsers =  async(req, res) => {
     try {
         const users = await User.findAll({

@@ -45,6 +45,7 @@ appointmentController.createAppointment = async (req, res) => {
         )
     }
 }
+
 //DELETE APPOINTMENT
 
 appointmentController.deleteAppointment = async (req, res) => {

@@ -1,7 +1,7 @@
 const { User } = require('../models');
 const bcrypt = require('bcrypt');
 
-//VERIFY TOKEN
+//VERIFY TOKEN //REGISTER
 const jwt = require('jsonwebtoken');
 
 const authController = {};
@@ -29,6 +29,7 @@ authController.register = async (req, res) => {
         return res.send('Something went wrong creating users ' + error.message)
     }
 }
+// LOGIN
 
 authController.login = async (req, res) => {
     try {
