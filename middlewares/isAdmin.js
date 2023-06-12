@@ -5,7 +5,7 @@ const isAdmin = async (req, res, next) => {
     } else {
       return res.json({
         success: true,
-        message: "You don't have permissions 1.",
+        message: "You do not have permissions",
       });
     }    
   } catch (error) {

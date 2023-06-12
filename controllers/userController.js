@@ -78,7 +78,8 @@ userController.updateUser = async(req, res) => {
     }
 }
 //GET ALL USERS
-userController.getAllUsers =  async(req, res) => {
+// 
+userController.getAllPatients =  async(req, res) => {
     try {
         const users = await User.findAll({
             where: {

@@ -10,7 +10,6 @@ const isDoctor = require('../middlewares/isDoctor');
 
 router.get('/getUser', auth, userController.getUser);
 router.put('/updateUser', auth, userController.updateUser);
-router.get('/getAllUsers', auth, isAdmin, userController.getAllUsers);
-
+router.get('/getAllPatients', auth, isAdmin, userController.getAllPatients);
 
 module.exports = router;
