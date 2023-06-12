@@ -21,15 +21,17 @@ A continuación enumero los pasos más relevantes para la ejecución del proyect
 13. Creo middlewares para controlar el nivel de acceso a la información o a las funcionalidades de la base de datos según roles.
    
 ## Endpoints
+
 A continuación presento una serie de endpoints requeridos:
-![Alt text](img/masterRules.jpg)
 
-## Página Home 
-![Alt text](img/masterMindHome.jpg)
+### Registro usuario-Admin
+![Alt text](img/Admin%20register.jpg)
 
+### Login usuario_Doctor 
+![Alt text](img/Doctor%20Login.jpg)
 
-## Página acceso al juego
-![Alt text](img/masterPlayer.jpg)
+### como Doctor poder obtener listado de pacientes registrados
+![Alt text](img/Get%20all%20patients%20as%20a%20Doctor.jpg)
 
 ## Página selección colores-nivel principiante
 ![Alt text](img/masterColors.jpg)
@@ -46,7 +48,7 @@ A continuación presento una serie de endpoints requeridos:
 
 
 #### Link al repositorio
-https://github.com/martaop18/Project3-MasterMind
+https://github.com/martaop18/Project-4-Dental-Clinic.git
 
 
 
@@ -56,4 +58,5 @@ https://github.com/martaop18/Project3-MasterMind
 
 ### Agradecimientos
 
-A mis compañeros Carlos y Ximo por apoyarme en este proceso.
+A Dani por ser un maestro excepcional, por su entrega y apoyo.
+A todos los compañeros que me brindan su apoyo, especialmente a Oriana. Gracias Ori, llegarás muy lejos✨
