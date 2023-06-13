@@ -126,7 +126,7 @@ appointmentController.getUserAppointments = async (req, res) => {
       },
     });
 
- return res.json({
+    return res.json({
       success: true,
       message: "Appointments retrieved",
       data: getUserAppointments,

@@ -20,7 +20,10 @@ A continuación enumero los pasos más relevantes para la ejecución del proyect
 12. Creo db.js y route.js en raíz
 13.  Creo middlewares para controlar el nivel de acceso a la información o a las funcionalidades de la base de datos según roles.   
 14. Creo carpeta controllers y views, en views encontramos los destinos finales.
-    
+15. 
+## Diagrama base de datos relacional
+![Alt text](img/relational%20db.jpg)
+
 ## Endpoints
 
 A continuación presento una serie de endpoints requeridos. Las visuales las he obtenido gracias a la interacción de la base de datos y sequelize con Postman:
@@ -44,8 +47,7 @@ A continuación presento una serie de endpoints requeridos. Las visuales las he 
 ### Obtener tus propias citas como paciente
 ![Alt text](img/Get%20your%20own%20appointments%20Ema.jpg)
 
-### Diagrama base de datos relacional
-![Alt text](img/relational%20db.jpg)
+
 
 
 ### Link al repositorio
