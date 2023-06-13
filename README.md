@@ -20,7 +20,7 @@ A continuación enumero los pasos más relevantes para la ejecución del proyect
 12. Creo db.js y route.js en raíz
 13.  Creo middlewares para controlar el nivel de acceso a la información o a las funcionalidades de la base de datos según roles.   
 14. Creo carpeta controllers y views, en views encontramos los destinos finales.
-15. 
+    
 ## Diagrama base de datos relacional
 ![Alt text](img/relational%20db.jpg)
 
