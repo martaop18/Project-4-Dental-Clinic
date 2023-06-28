@@ -5,6 +5,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 // REGISTER
 const authController = {};
+
 authController.register = async (req, res) => {
   try {
     const password = req.body.password;
